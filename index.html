@@ -1,26 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="images/logo.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Genshin Store</title>
+  <link rel="stylesheet" href="css/all.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    
+    <header>
+    <div class="container header-container">
+        <!-- Logo -->
+        <div class="logo-container">
+        <button class="sr-only" aria-hidden="true" tabindex="-1"></button>
+        <div class="logo-image">
+            <img src="images/logo.png" alt="Genshin Store logo"/>
+        </div>
+        <div class="logo-text"><h1>Genshin Store</h1></div>
+        </div>
+
+        <!-- Mobile menu toggle -->
+        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav" aria-label="Primary">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#Store">Store</a></li>
+        </ul>
+        </nav>
+
+        <!-- Header actions: search + cart + account -->
+        <div class="header-actions">
+        <!-- Search -->
+        <form class="search" role="search" aria-label="Site search">
+            <label for="q" class="sr-only">Search</label>
+            <input id="q" name="q" type="search" placeholder="Search" />
+            <button type="submit" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+
+        <!-- Cart -->
+        <button id="cart-btn" class="btn cart-btn" type="button" aria-label="Open cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span id="cart-count" class="badge">0</span>
+        </button>
+
+        <!-- Account (placeholder) -->
+        <button id="account-btn" class="btn" type="button" aria-label="Account menu">
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </button>
+        </div>
+    </div>
+
+    <!-- Mobile sheet menu -->
+    <div id="mobile-menu" class="mobile-menu" hidden>
+        <div class="container mobile-menu-inner">
+        <nav aria-label="Mobile">
+            <ul class="menu menu--column">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <form class="search" role="search" aria-label="Mobile search">
+            <label for="qm" class="sr-only">Search</label>
+            <input id="qm" name="q" type="search" placeholder="Search" />
+            <button type="submit" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+        </div>
+    </div>
+    </header>
 
 
+  <main>
+    <!-- Hero -->
+    <section class="hero container" aria-label="Store hero">
+      <div class="hero-media">
+        <img src="images/bg5.jpg" alt="Colorful fantasy landscape background"/>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div>
+            <h2>Shop Featured Characters, Artifacts, and Weapons</h2>
+            <p>Curated items from the world you love — with fast checkout and secure payments.</p>
+            <button class="cta" type="button">Browse All Items</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Featured Items -->
+    <section class="container" aria-labelledby="featured-title">
+      <div class="section-header">
+        <h3 id="featured-title">Featured Items</h3>
+        <div class="filter" aria-label="Category filters">
+          <button class="pill active" type="button">All</button>
+          <button class="pill" type="button">Characters</button>
+          <button class="pill" type="button">Artifacts</button>
+          <button class="pill" type="button">Weapons</button>
+        </div>
+        <form class="search" role="search" aria-label="Filter search" style="margin-left:auto; max-width:320px">
+          <label for="q2" class="sr-only">Search items</label>
+          <input id="q2" name="q2" type="search" placeholder="Search items" />
+          <button type="submit" aria-label="Search"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+      </div>
 
+      <div class="grid">
+        <!-- Card 1 -->
+        <article class="card" aria-label="Genyu character item">
+          <div class="card-media">
+            <img src="images/chara0.jpg" alt="Genyu artwork" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <h4>Genyu</h4>
+              <span class="price"><span class="price_value">30</span>$</span>
+            </div>
+            <p class="muted">Popular character. Limited stock.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn primary" type="button">Buy now</button>
+            <button class="btn" type="button">Add to cart</button>
+          </div>
+        </article>
 
+        <!-- Card 2 -->
+        <article class="card" aria-label="Mono character item">
+          <div class="card-media">
+            <img src="images/Furina.jpeg" alt="Mono artwork" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <h4>Mono</h4>
+              <span class="price"><span class="price_value">45</span>$</span>
+            </div>
+            <p class="muted">Exclusive bundle.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn primary" type="button">Buy now</button>
+            <button class="btn" type="button">Add to cart</button>
+          </div>
+        </article>
 
+        <!-- Card 3 -->
+        <article class="card" aria-label="Artifact set item">
+          <div class="card-media">
+            <img src="images/clorinde.jpeg" alt="Artifact set" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <h4>Artifact Set</h4>
+              <span class="price"><span class="price_value">25</span>$</span>
+            </div>
+            <p class="muted">Boosts elemental mastery.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn primary" type="button">Buy now</button>
+            <button class="btn" type="button">Add to cart</button>
+          </div>
+        </article>
 
+        <!-- Card 4 -->
+        <article class="card" aria-label="Sword weapon item">
+          <div class="card-media">
+            <img src="images/Genishin Impact OC.jpeg" alt="Legendary sword" />
+          </div>
+          <div class="card-body">
+            <div class="card-title">
+              <h4>Legendary Sword</h4>
+              <span class="price"><span class="price_value">60</span>$</span>
+            </div>
+            <p class="muted">Agile and precise.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn primary" type="button">Buy now</button>
+            <button class="btn" type="button">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <!-- Reviews -->
+    <section class="container reviews" id="reviews" aria-labelledby="reviews-title">
+      <h3 id="reviews-title" class="section-header" style="margin-bottom:1rem">Our Customers' Reviews</h3>
+      <div class="review-card">
+        <div class="avatar">
+          <img src="images/chara0.jpg" alt="Avatar of Mono" />
+        </div>
+        <div>
+          <h4 style="margin-bottom:.25rem">Mono</h4>
+          <div class="stars" aria-label="5 out of 5 stars">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+          </div>
+          <p class="muted">Best shop ever!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Genshin Store • All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // small enhancement: current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // --- Responsive header: show hamburger under 900px ---
+    const mql = window.matchMedia('(max-width: 900px)')
+    const hamburger = document.getElementById('hamburger')
+    const desktopNav = document.querySelector('.desktop-nav')
+    const headerActions = document.querySelector('.header-actions')
+    const mobileMenu = document.getElementById('mobile-menu')
+
+    function applyLayout(e){
+      const isSmall = e.matches
+      if(isSmall){
+        hamburger.style.display = 'inline-flex'
+        desktopNav.style.display = 'none'
+        headerActions.style.display = 'none'
+      }else{
+        hamburger.style.display = 'none'
+        desktopNav.style.display = ''
+        headerActions.style.display = ''
+        mobileMenu.style.display = 'none'
+        hamburger.setAttribute('aria-expanded','false')
+      }
+    }
+    mql.addEventListener('change', applyLayout)
+    applyLayout(mql)
+
+    // hamburger toggle
+    hamburger.addEventListener('click', ()=>{
+      const open = mobileMenu.style.display !== 'none'
+      mobileMenu.style.display = open ? 'none' : 'block'
+      hamburger.setAttribute('aria-expanded', String(!open))
+    })
+
+    // --- Simple cart counter demo (counts clicks on "Add to cart") ---
+    const cartCountEl = document.getElementById('cart-count')
+    let cartCount = 0
+    document.addEventListener('click', (e)=>{
+      const t = e.target
+      if(t.matches('.btn') && t.textContent.trim().toLowerCase().includes('add to cart')){
+        cartCount++
+        cartCountEl.textContent = String(cartCount)
+      }
+    })
+  </script>
 </body>
 </html>
