@@ -50,10 +50,20 @@
             <span id="cart-count" class="badge">0</span>
         </button>
 
-        <!-- Account (placeholder) -->
-        <button id="account-btn" class="btn" type="button" aria-label="Account menu">
+        <!-- Account (with dropdown) -->
+        <div class="account-wrapper">
+        <button id="account-btn" class="btn account-toggle" aria-haspopup="true" aria-expanded="false" aria-controls="account-menu">
             <i class="fa fa-user" aria-hidden="true"></i>
         </button>
+
+        <ul id="account-menu" class="account-menu" role="menu" aria-hidden="true">
+            <li role="menuitem"><a href="#profile">Profile</a></li>
+            <li role="menuitem"><a href="#orders">Orders</a></li>
+            <li role="menuitem"><a href="#settings">Settings</a></li>
+            <li role="menuitem"><a href="#logout">Logout</a></li>
+        </ul>
+        </div>
+
         </div>
     </div>
 
